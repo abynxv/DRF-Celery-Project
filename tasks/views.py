@@ -10,7 +10,8 @@ from .serializers import (
     AddNumbersSerializer, MultiplyNumbersSerializer, ProcessDataSerializer,
     TaskStatusSerializer
 )
-from .tasks import long_running_task, add_numbers, multiply_numbers, send_email_task, process_data_batch
+from .tasks import add_numbers, multiply_numbers
+# from .tasks import long_running_task, send_email_task, process_data_batch
 
 
 class TaskResultListView(generics.ListAPIView):
@@ -24,10 +25,10 @@ class TaskResultDetailView(generics.RetrieveAPIView):
     serializer_class = TaskResultSerializer
     lookup_field = 'task_id'
 
-class EmailTaskListCreateView(generics.ListCreateAPIView):
-    """List and create email tasks"""
-    queryset = EmailTask.objects.all()
-    serializer_class = EmailTaskSerializer
+# class EmailTaskListCreateView(generics.ListCreateAPIView):
+#     """List and create email tasks"""
+#     queryset = EmailTask.objects.all()
+#     serializer_class = EmailTaskSerializer
 
 @api_view(['POST'])
 def start_long_task(request):
