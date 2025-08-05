@@ -147,4 +147,5 @@ CELERY_TASK_TIME_LIMIT = 30 * 60
 CELERY_TASK_SOFT_TIME_LIMIT = 60
 
 # Email Configuration(Testing purposes)
-EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = 'no-reply@testing.com'

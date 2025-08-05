@@ -7,17 +7,17 @@ urlpatterns = [
     path('results/<str:task_id>/', TaskResultDetailView.as_view(), name='task-result-detail'),
     
     # Email tasks
-    # path('emails/', views.EmailTaskListCreateView.as_view(), name='email-tasks'),
+    path('emails/', EmailTaskListCreateView.as_view(), name='email-tasks'),
     
     # Task operations
-    # path('start-long-task/', views.start_long_task, name='start-long-task'),
+    path('start-long-task/', start_long_task, name='start-long-task'),
     path('add/', add_task, name='add-task'),
     path('multiply/', multiply_task, name='multiply-task'),
-    # path('send-email/', views.send_email, name='send-email'),
-    # path('process-data/', views.process_data, name='process-data'),
+    path('send-email/', send_email, name='send-email'),
+    path('process-data/', process_data, name='process-data'),
     
-#     # Task management
-#     path('status/<str:task_id>/',task_status, name='task-status'),
-#     path('cancel/<str:task_id>/',cancel_task, name='cancel-task'),
-#     path('celery-status/',celery_status, name='celery-status'),
+    # Task management
+    path('status/<str:task_id>/',task_status, name='task-status'),
+    path('cancel/<str:task_id>/',cancel_task, name='cancel-task'),
+    path('celery-status/',celery_status, name='celery-status'),
 ]
