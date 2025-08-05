@@ -65,6 +65,7 @@ Body:
 ```
 <img width="1329" height="553" alt="Screenshot from 2025-08-01 12-47-14" src="https://github.com/user-attachments/assets/dcd5827f-2a08-4658-9ffb-04a6c3e8d1f3" />
 Multiply Numbers: POST /multiply/
+
 ```bash
 Body:
 {
@@ -73,12 +74,14 @@ Body:
 }
 ```
 <img width="1329" height="553" alt="Screenshot from 2025-08-01 12-47-28" src="https://github.com/user-attachments/assets/71086adc-5a55-4809-8793-20d575d5fdf3" />
+
 ## Fetch Task Results
+
 ```bash
 List All Results: GET /results/
 ```
 <img width="1329" height="522" alt="Screenshot from 2025-08-01 12-48-05" src="https://github.com/user-attachments/assets/b1366c7b-c2ea-40fc-bc40-fae2a179c282" />
-```
+
 ```bash
 Get Specific Result: GET /results/<task_id>/
 ```
